@@ -1,0 +1,4 @@
+rofi.modi: drun,ssh
+rofi.terminal: xst 
+
+rofi.theme: ~/.config/rofi/themes/DarkBlue.rasi
