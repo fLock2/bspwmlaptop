@@ -4,11 +4,11 @@
 
 # terminal emulator
 alt + Return
-        xst	
+	xst
 
 # program launcher
-alt + d 
-	rofi -show drun	
+alt + d
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 alt + Escape
@@ -23,10 +23,10 @@ alt + shift + {e,r}
 	bspc {quit,wm -r}
 
 # close and kill
-alt + {_,shift + }q
+alt + {_,shift + }w
 	bspc node -{c,k}
 
-# superernate between the tiled and monocle layout
+# alternate between the tiled and monocle layout
 alt + m
 	bspc desktop -l next
 

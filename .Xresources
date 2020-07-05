@@ -1,5 +1,4 @@
-URxvt.font: xft:Fira Code Light:size=10,xft:Hack:size=10,xft:PowerlineSymbols:size=10
-
+URxvt.font: xft:Hack:pixelsize=12:antialias=true:autohint=true
 rofi.font: Fira Sans 8
 
 Xft.dpi:                        96

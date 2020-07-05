@@ -1,4 +1,4 @@
-source /usr/share/zsh/share/antigen.zsh
+source /home/elian/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -14,14 +14,13 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme denysdovhan/spaceship-prompt 
+antigen theme minimal 
 # Tell Antigen that you're done.
 antigen apply 
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_BATTERY_THRESHOLD=75
-SPACESHIP_USER_SHOW=always
-SPACESHIP_USER_COLOR=blue
-SPACESHIP_HOST_SHOW=always
+
+alias in="sudo zypper install"
+alias up="sudo zypper update"
+alias gh="git clone https://github.com/"
 # IP address lookup
 alias whatismyip="whatsmyip"
 function whatsmyip ()
