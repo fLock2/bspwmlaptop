@@ -4,11 +4,11 @@ sxhkd &
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 #autostart
 xrdb ~/.Xresources
-light -S 15
-feh --bg-fill ~/Pictures/Wal/bg2.png
+light -S 5
+feh --bg-fill ~/Pictures/Wal/bg4.bmp
 compton -CGb --config ~/.config/compton/compton.conf
 #sh $HOME/.config/polybar/launch.sh
-sleep 1s && bash ~/lemonbar.sh | lemonbar -p -f "Hack"-10 -f FontAwesome
+sleep .25s && bash ~/lemonbar.sh | lemonbar -p -f "SF Mono Powerline"-10 -f "Font Awesome 5 Free"
 
 bspc config border_width         2
 bspc config window_gap           0
@@ -21,3 +21,4 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a Zathura state=tiled

@@ -1,5 +1,4 @@
 source /home/elian/antigen.zsh
-
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
@@ -20,35 +19,19 @@ antigen apply
 
 alias in="sudo zypper install"
 alias up="sudo zypper update"
-alias gh="git clone https://github.com/"
-# IP address lookup
-alias whatismyip="whatsmyip"
-function whatsmyip ()
-{
-	# Dumps a list of all IP addresses for every device
-	# /sbin/ifconfig |grep -B1 "inet addr" |awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' |awk -F: '{ print $1 ": " $3 }';
-
-	# Internal IP Lookup
-	echo -n "Internal IP: " ; /sbin/ifconfig eth0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'
-
-	# External IP Lookup
-	echo -n "External IP: " ; wget http://smart-ip.net/myip -O - -q
-}
-
-# Show current network information
-netinfo ()
-{
-	echo "--------------- Network Information ---------------"
-	/sbin/ifconfig | awk /'inet addr/ {print $2}'
-	echo ""
-	/sbin/ifconfig | awk /'Bcast/ {print $3}'
-	echo ""
-	/sbin/ifconfig | awk /'inet addr/ {print $4}'
-
-	/sbin/ifconfig | awk /'HWaddr/ {print $4,$5}'
-	echo "---------------------------------------------------"
-}
-
+alias dup="sudo tumbleweed upgrade"
+alias lp="zypper se -i"
+alias rp="sudo zypper remove"
+alias zrf="sudo zypper refresh"
+alias gcl="git clone"
+alias gcm="git commit -m"
+alias gpl="git pull"
+alias gph="git push origin master"
+alias gad="git add"
+alias grm="git remove"
+alias srst="scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png" 
+alias crst="scrot -s ~/Pictures/Screenshots/%b%d::%H%M%S.png"
+alias vim="nvim"
 # Copy file with a progress bar
 cpp()
 {
@@ -104,4 +87,21 @@ extract () {
 		fi
 	done
 }
+
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/elian/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/elian/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/elian/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/elian/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 

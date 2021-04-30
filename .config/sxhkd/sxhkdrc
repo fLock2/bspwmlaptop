@@ -4,12 +4,13 @@
 
 # terminal emulator
 alt + Return
-	xst
+	termite
 
 # program launcher
 alt + d
 	rofi -show drun
-
+alt + shift + d
+	rofi -show run
 # make sxhkd reload its configuration files:
 alt + Escape
 	pkill -USR1 -x sxhkd
@@ -119,3 +120,15 @@ alt + super + shift + {h,j,k,l}
 # move a floating window
 alt + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#PDF Openers
+alt + shift + v
+	zathura ~/PDF/vim-cheatsheet.pdf
+
+#Screenshots
+alt + shift + p
+	scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png && notify-send "Screenshot Saved"
+
+alt + ctrl + p
+	scrot -s ~/Pictures/Screenshots/%b%d::%H%M%S.png && notify-send "Screenshot Saved"
+
